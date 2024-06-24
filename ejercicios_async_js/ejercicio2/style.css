@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+}
+
+button{
+    padding: 10px 50px;
+    border-radius: 10px;
+    background-color: rgb(159, 243, 243);
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
