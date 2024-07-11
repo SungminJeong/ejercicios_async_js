@@ -6,9 +6,8 @@ const getCharacterInfo = () => {
 };
 
 const paintData = (data) => {
-	console.log(data)
 	const selection = document.querySelector('#character-list');
-
+	console.log(data)
 	for(const name of data){
 		const option = document.createElement('option')
 		option.setAttribute("value", name.id)
@@ -22,7 +21,6 @@ const paintData = (data) => {
 		const infoBox = document.querySelector('.infoBox');
 		const img = document.querySelector('img');
 
-		console.log(infoBox);
 		imgBox.setAttribute('src', character.imageUrl);
 		img.style.width = "350px";
 		img.style.height = "300px";
@@ -33,8 +31,12 @@ const paintData = (data) => {
 			<p><em>- ${character.firstName} -</em></p>
 		</div>
 		`
+		
 		if(selection.value === ''){
 			imgBox.setAttribute('src', "https://pyxis.nymag.com/v1/imgs/028/c95/9998bd19a44092f589f7cf53281bc738bf-28-got-questions.2x.rhorizontal.w700.jpg");
+			infoBox.innerHTML = `
+			<h1>Select a character</h1>
+			`
 		};
 	});
 };
